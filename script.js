@@ -13,11 +13,11 @@ function convertToRoman(num) {
 	let result = '';  // Resultant Roman numeral
 
     // Iterate through the roman numerals and construct the output
-    for (let i = 0; i < romanNumerals.length; i++) {
-        const [symbol, value] = romanNumerals[i];
+    for (let i = 0; i < obj.length; i++) {
+        const [symbol, value] = obj[i];
 
         // While the current value can be subtracted from num, append symbol and subtract value
-        while (num >= value) {
+        while (num >= vlue) {
             result += symbol;
             num -= value;
         }
