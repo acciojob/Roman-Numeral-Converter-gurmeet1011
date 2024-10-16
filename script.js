@@ -10,20 +10,20 @@ function convertToRoman(num) {
     };
 
   //your code here
-	let result = '';  // Resultant Roman numeral
+	let result = '';  // Result string
 
-    // Iterate through the roman numerals and construct the output
-    for (let i = 0; i < obj.length; i++) {
-        const [symbol, value] = obj[i];
+  // Instead of `for`, we’ll manually loop through the object keys in the right order
+  for (let i = 0; i <= 6; i++) {
+    const [symbol, value] = obj[i];
 
-        // While the current value can be subtracted from num, append symbol and subtract value
-        while (num >= vlue) {
-            result += symbol;
-            num -= value;
-        }
+    // Keep appending symbols while the value fits
+    while (num >= value) {
+      result += symbol;
+      num -= value;
     }
+  }
 
-    return result;  // Return the Roman numeral
+  return result;  // Return the Roman numeral
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
